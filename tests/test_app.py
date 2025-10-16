@@ -27,7 +27,7 @@ class TestActivitiesEndpoint:
         
         data = response.json()
         assert isinstance(data, dict)
-        assert len(data) == 9  # Should have all 9 activities
+        assert len(data) == len(activities)  # Should have all activities
         assert "Chess Club" in data
         assert "Programming Class" in data
         assert "Gym Class" in data
